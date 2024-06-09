@@ -1,7 +1,7 @@
 # RAGTune
 RAGTune is an application for improving _RAG_ performance by generating efficient _prompt tuning_ and _model finetuning_
 
-![Image of chat interface](https://github.com/VivekSil/RAGTune/blob/main/chat.png)
+![Image of chat interface](https://github.com/VivekSil/RAGTune/blob/main/images/chat_marked.png)
 
 ## Features
 RAGTune support the following features
