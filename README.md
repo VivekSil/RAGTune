@@ -6,15 +6,15 @@ RAGTune is an application for improving _RAG_ performance by generating efficien
 ## Features
 RAGTune support the following features
 - Local chat: Completely local chat with [Ollama](https://www.ollama.com/) and [Weaviate](https://weaviate.io/)'s text2vec-transformers model inference
-- Prompt tuning : Efficiently optimized prompt based on the instruction
-- Embedding finetuning: Finetuning embedding models on custom data
+- Prompt tuning : Efficiently optimized prompt based on the instruction using [DSPy](https://github.com/stanfordnlp/dspy)
+- Embedding finetuning: Finetuning embedding models on custom data using [LlamaIndex](https://www.llamaindex.ai/) and [Groq](https://groq.com/)
 
 ## Setup
 This application requires `python==3.9`, `ollama` and `node`
 - Backend
     - Run `cd backend `
     - Run `pip install -r requirements.txt`
-    - Run `docker-compose up` to set up the transformer model (uses [transformer-inference](https://hub.docker.com/r/semitechnologies/transformers-inference))
+    - Run `docker run -p 8080:8080 cr.weaviate.io/semitechnologies/transformers-inference:sentence-transformers-multi-qa-MiniLM-L6-cos-v1` to set up the transformer model
     - Run `uvicorn main:app`
 
 - Frontend
