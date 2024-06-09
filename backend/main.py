@@ -134,7 +134,6 @@ async def embedding_finetuning(model:str):
 @app.get("/api/rapt_generate")
 async def rapt_generate(query: str):
     global additional_instruction
-    # Generate a response using a JSON object of schema {"response":response}. You will reply with only JSON and no explanation and other information
     sign = OracleSignature
     sign.__doc__+=additional_instruction
     program = OracleRAFT()
